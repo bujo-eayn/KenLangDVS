@@ -1,11 +1,13 @@
-version: '3.8'
 
 services:
   ken_lang_dvs:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel  # Latest version of PyTorch on docker hub
+    container_name: ken_lang_dvs
+    working_dir: /app
     volumes:
-      - .:/app
+      - .:/app  # Mount the project directory
     stdin_open: true
     tty: true
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: bash
