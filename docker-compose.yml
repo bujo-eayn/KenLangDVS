@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ken_lang_dvs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
