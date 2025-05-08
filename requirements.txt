@@ -1,8 +1,0 @@
-transformers
-numpy
-pandas
-nltk
-spacy
-scikit-learn
-requests
-pydrive
